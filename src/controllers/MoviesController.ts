@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { getRepository } from "typeorm";
-import { Actor } from "../entity/actor.entity";
 import { Movie } from "../entity/movie.entity";
 
 

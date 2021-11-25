@@ -25,16 +25,6 @@ class Server {
     this.app.use(cors());
     this.app.use(express.json());
     this.app.use(urlencoded({ extended: false }));
-    // this.app.use((req: Request, res: Response) => {
-    //   // Access to allowed domains  (ej. 'http://example.com')
-    //   res.setHeader('Access-Control-Allow-Origin', '*');
-
-    //   // Methods you want to allow
-    //   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-
-    //   // supported headers (ej. 'X-Requested-With,content-type')
-    //   res.setHeader('Access-Control-Allow-Headers', '*');
-    // })
   }
 
   routes(): void {

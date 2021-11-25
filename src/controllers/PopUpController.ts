@@ -28,10 +28,7 @@ class PopUpController {
     });
     
     if (movie && actor) {
-      const id_movie_selected_to_deleted = actor.movies.findIndex(movie => movie.id.toString() == req.params.id_movie)
-      if (id_movie_selected_to_deleted == -1) return res.json('Sorry no exist')
-      const data = actor.movies.splice(id_movie_selected_to_deleted, 1)
-      const ActorsRes = actor.movies.filter((movie, index) => movie.id != data[0].id)
+      const ActorsRes = actor.movies.filter((mve, index) => mve.id != movie.id)
       actor.movies = [...ActorsRes];
       Actor.save(actor)
         .then(() => res.json({ msg: "PopUp DELETED" }))
